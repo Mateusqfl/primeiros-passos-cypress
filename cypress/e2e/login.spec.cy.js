@@ -1,3 +1,5 @@
+import userData from '../fixtures/userData.json'
+
 describe('Orange HRM test', () => {
 
   const selectorsLister = {
@@ -11,17 +13,7 @@ dashboardGrid: ".oxd-layout-navigation"
 
   }
 
-  const userData ={
-    userSuccess: {
-      username: "Admin",
-      passoword: "admin123"
-    },
-    userFail: {
-      username: "test",
-      passoword: "test"
-    }
 
-  }
   it('Login com sucesso', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.get(selectorsLister.usernameField).type(userData.userSuccess.username)
