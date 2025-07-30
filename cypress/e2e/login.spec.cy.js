@@ -15,7 +15,7 @@ dashboardGrid: ".oxd-layout-navigation"
 
 
   it('Login com sucesso', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsLister.usernameField).type(userData.userSuccess.username)
     cy.get(selectorsLister.passwordField).type(userData.userSuccess.passoword)
     cy.get(selectorsLister.loginButton).click()
@@ -23,7 +23,7 @@ dashboardGrid: ".oxd-layout-navigation"
     cy.get(selectorsLister.dashboardGrid)
   })
   it('Login Falho', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsLister.usernameField).type(userData.userFail.username)
     cy.get(selectorsLister.passwordField).type(userData.userFail.passoword)
     cy.get(selectorsLister.loginButton).click()
